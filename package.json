@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "netlify-lambda serve src/functions",
+    "build": "netlify-lambda build src/functions",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/HazeyamaLab/look-back-functions/issues"
   },
-  "homepage": "https://github.com/HazeyamaLab/look-back-functions#readme"
+  "homepage": "https://github.com/HazeyamaLab/look-back-functions#readme",
+  "dependencies": {
+    "netlify-lambda": "^2.0.1"
+  }
 }
