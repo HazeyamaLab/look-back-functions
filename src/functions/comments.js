@@ -3,6 +3,8 @@ import { GITHUB_TOKEN } from "../env";
 
 exports.handler = async function(event, context) {
 
+    console.log(event);
+
     const octokit = new Octokit({
         auth: GITHUB_TOKEN
     });
@@ -27,6 +29,6 @@ exports.handler = async function(event, context) {
 
     return {
         statusCode: 200,
-        body: JSON.stringify(data)
+        body: JSON.stringify(event)
     };
 }
