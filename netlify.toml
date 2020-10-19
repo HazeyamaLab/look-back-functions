@@ -1,5 +1,3 @@
 [build]
     command="yarn build"
     functions="build"
-[[plugins]]
-package = "@netlify/plugin-functions-install-core"
