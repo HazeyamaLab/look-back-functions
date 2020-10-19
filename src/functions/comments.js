@@ -9,10 +9,11 @@ exports.handler = async function(event, context) {
         auth: GITHUB_TOKEN
     });
 
+    //日の取得
     var day = new Date();
 
     const issue_number = 1;
-    const fix = "しゅうせい";
+    const fix = "修正";
     const cause = "げんいん";
     const study = "学んだこと";
     const date = (day.getMonth()+1)+"月"+day.getDate()+"日";
