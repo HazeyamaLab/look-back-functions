@@ -11,14 +11,15 @@ exports.handler = async function(event, context) {
 
     //日の取得
     var day = new Date();
-    console.log(event.body)
+    console.log(JSON.parse(event.body))
+    const obj=JSON.parse(event.body)
 
     const issue_number =1;//=event.body.payload.issue
-    const fix =event.body["fix"];
-    const cause =event.body["cause"];
-    const study =event.body["study"];
+    const fix =obj["fix"];
+    const cause =obj["cause"];
+    const study =obj["study"];
     const date = (day.getMonth()+1)+"月"+day.getDate()+"日";
-    const human =event.body["human"];
+    const human =obj["human"];
     // const repo = event.body.payload.repo
     const body = `## 修正内容
 `+fix+`
