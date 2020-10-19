@@ -39,6 +39,13 @@ exports.handler = async function(event, context) {
         body
     })
 
+    const remove = await octokit.issues.removeLabel({
+        owner: "HKT0131",
+        repo,
+        issue_number,
+        name: "need_check",
+      });
+
     return {
         statusCode: 200,
         body: JSON.stringify(event)
