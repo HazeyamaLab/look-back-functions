@@ -14,13 +14,13 @@ exports.handler = async function(event, context) {
     console.log(JSON.parse(event.body))
     const obj=JSON.parse(event.body)
 
-    const issue_number =1;//=event.body.payload.issue
+    const issue_number =obj["issue"];
     const fix =obj["fix"];
     const cause =obj["cause"];
     const study =obj["study"];
     const date = (day.getMonth()+1)+"月"+day.getDate()+"日";
     const human =obj["human"];
-    // const repo = event.body.payload.repo
+    const repo = obj["repo"]
     const body = `## 修正内容
 `+fix+`
 ## 原因
@@ -33,8 +33,8 @@ exports.handler = async function(event, context) {
 `+human;
     
     const data = await octokit.issues.createComment({
-        owner: "HazeyamaLab",
-        repo: "look-back-functions",
+        owner: "HKT0131",
+        repo,
         issue_number,
         body
     })
