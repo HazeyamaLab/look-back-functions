@@ -22,6 +22,7 @@
     "@octokit/auth": "^2.0.0",
     "@octokit/rest": "^18.0.6",
     "dotenv": "^8.2.0",
+    "encoding": "^0.1.13",
     "netlify-lambda": "^2.0.1"
   }
 }
