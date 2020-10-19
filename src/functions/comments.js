@@ -11,6 +11,7 @@ exports.handler = async function(event, context) {
 
     //日の取得
     var day = new Date();
+    console.log(event.body)
 
     const issue_number =1;//=event.body.payload.issue
     const fix =event.body.payload.fix;
@@ -36,7 +37,6 @@ exports.handler = async function(event, context) {
         issue_number,
         body
     })
-    console.log(data)
 
     return {
         statusCode: 200,
