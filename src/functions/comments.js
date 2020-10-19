@@ -24,8 +24,8 @@ exports.handler = async function(event, context) {
     const data = await octokit.issues.createComment({
         owner: "HazeyamaLab",
         repo: "look-back-functions",
-        issue_number,
-        body
+        issue_number: 1,
+        body: "OKOK"
     })
 
     return {
