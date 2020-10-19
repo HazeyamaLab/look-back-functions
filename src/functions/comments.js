@@ -20,14 +20,15 @@ exports.handler = async function(event, context) {
     const human = "人";//=event.body.payload.human
     // const repo = event.body.payload.repo
     const body = "## 修正内容   "+fix+"   ## 原因   "+cause+"   ## 学んだこと   "+study+"   ## リリース日   "+date+"   ## 修正者   "+human;
-
+    
     const data = await octokit.issues.createComment({
         owner: "HazeyamaLab",
         repo: "look-back-functions",
         issue_number: 1,
         body: "OKOK"
     })
-
+    console.log(data)
+    
     return {
         statusCode: 200,
         body: JSON.stringify(event)
