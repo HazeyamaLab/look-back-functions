@@ -33,14 +33,14 @@ exports.handler = async function(event, context) {
 `+human;
     
     const data = await octokit.issues.createComment({
-        owner: "haze-lab",
+        owner: "HazeyamaLab",
         repo,
         issue_number,
         body
     })
 
     const remove = await octokit.issues.removeLabel({
-        owner: "haze-lab",
+        owner: "HazeyamaLab",
         repo,
         issue_number,
         name: "need_check",
